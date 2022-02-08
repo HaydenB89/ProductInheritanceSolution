@@ -17,7 +17,10 @@ namespace ProductInheritance {
             :base(code, price){    //call Constructor in the parent Class (Product) to avoid duplicate code
             Size = size;
             Color = color;
+        }
 
+        public Widget() : base() {
+            //this is empty therefore it activates the default values
         }
 
     }
