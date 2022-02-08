@@ -17,7 +17,9 @@ namespace ProductInheritance {
             salesOrder.Add(widget3);
             salesOrder.Add(service);
 
+            decimal salesOrderTotal = 0;
             foreach(Product p in salesOrder) {
+                salesOrderTotal += p.Price; //totals up all the product lines
                 if(p is Widget) {
                     Widget w = p as Widget;                                           //you have to define p as sometimes being a Widget/Service Class,
                     Console.WriteLine($"{p.Code} {p.Price:c} {w.Size} {w.Color}");    //otherwise it only assumes Product class which does not 
@@ -29,6 +31,7 @@ namespace ProductInheritance {
                     continue;
                 }
             }
+            Console.WriteLine($"Total sales order is {salesOrderTotal:c}");
 
             //Service s1 = new Service("BASIC", 100, "Basic", 3);
             //Console.WriteLine(s1.ToPrint());
