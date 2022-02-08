@@ -19,9 +19,15 @@ namespace ProductInheritance {
 
             foreach(Product p in salesOrder) {
                 if(p is Widget) {
-                    Widget w = p as Widget;                                         //you have to define p as sometimes being a Widget Class,
+                    Widget w = p as Widget;                                           //you have to define p as sometimes being a Widget/Service Class,
                     Console.WriteLine($"{p.Code} {p.Price:c} {w.Size} {w.Color}");    //otherwise it only assumes Product class which does not 
-                }                                                                     //include all properties, just the base
+                    continue;                                                         //include all properties, just the base
+                }                                                                     
+                if(p is Service) {
+                    Service s = p as Service;
+                    Console.WriteLine($"{p.Code} {p.Price:c} {s.ServiceLevel} {s.NumberOfYears} years");
+                    continue;
+                }
             }
 
             //Service s1 = new Service("BASIC", 100, "Basic", 3);
