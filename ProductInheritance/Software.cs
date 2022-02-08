@@ -9,7 +9,7 @@ namespace ProductInheritance {
         public bool Book { get; set; } = true;
 
         public override string ToPrint() {
-            return $"{base.ToPrint()} | {(Book ? "Yes" : "No")}"; // turnery statement will produce yes/no instead of true/false
+            return $"{base.ToPrint()} | {(Book ? "Yes" : "No")}"; // ternary statement will produce yes/no instead of true/false
         }
 
         public Software(string code, decimal price, bool book)

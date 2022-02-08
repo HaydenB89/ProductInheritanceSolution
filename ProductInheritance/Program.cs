@@ -40,6 +40,12 @@ namespace ProductInheritance {
             }
             Console.WriteLine($"Total sales order is {salesOrderTotal:c}");
 
+
+            /*
+             * the next lines are just the initial test of the Program w/o using the 
+             * classes to input products
+             */
+
             //Service s1 = new Service("BASIC", 100, "Basic", 3);
             //Console.WriteLine(s1.ToPrint());
 
