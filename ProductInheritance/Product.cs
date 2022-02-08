@@ -12,10 +12,11 @@ namespace ProductInheritance {
         public decimal Price { get; set; }
 
         //methods(actions)
-        public string ToPrint() {
+        public virtual string ToPrint() {             //key word 'virtual' means another class may override
             return $"{GetType().ToString()} | {Code} | {Price:c}"; 
 
         }
+
         //Constructor (default would be no parameters (null or 0) if you dont create a Constructor)
                             //strings default to null
                             //boolean default to false
